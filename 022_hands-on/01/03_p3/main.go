@@ -40,6 +40,7 @@ func me(w http.ResponseWriter, r *http.Request) {
 	io.WriteString(w, "fuzzy")
 }
 
+// Handle Error handles erros when executing templates
 func HandleError(w http.ResponseWriter, err error) {
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
